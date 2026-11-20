@@ -1,0 +1,66 @@
+/* Джарвіс — прототип. Дизайн-токени (усі кольори й параметри — лише тут).
+   Палітра: глибокий графіт + холодне срібло (як техніка Apple), ледь помітне золото (тонкі лінії, теплий відблиск ядра),
+   смарагд — лише «жива іскра» (агент працює, Джарвіс говорить, усе гаразд). Синього й блакитного немає. */
+:root {
+  /* графіт (нейтральний, без синього відтінку) */
+  --c-bg: #0e0e0f;
+  --c-bg-2: #151516;
+  --c-bg-glow: #1b1b1d;
+  --c-surface: rgba(28, 28, 30, .72);      /* панелі */
+  --c-surface-2: rgba(38, 38, 40, .8);     /* картки, поле вводу */
+  --c-line: rgba(235, 235, 240, .08);      /* роздільники */
+  --c-line-2: rgba(235, 235, 240, .14);
+
+  /* срібло й текст (контраст на --c-bg: 16.9 / 9.6 / 6.1) */
+  --c-text: #ececee;
+  --c-text-2: #b9b9be;
+  --c-text-3: #8e8e93;
+  --c-silver: #d6d6da;
+
+  /* золото — лише тонкі лінії й теплий відблиск ядра */
+  --c-gold: #cdb27a;
+  --c-gold-line: rgba(205, 178, 122, .32);
+  --c-gold-faint: rgba(205, 178, 122, .14);
+  --c-gold-glow: rgba(232, 201, 138, .22);
+  --c-gold-arc: #f3e2bc;    /* яскрава дуга ядра */
+  --c-core: #fff8ea;        /* теплий центр ядра */
+  --c-core-speak: #eafff4;  /* центр, коли говорить */
+  --c-core-bg: #0b0b0c;
+
+  /* смарагд — жива іскра */
+  --c-emerald: #3ecf8e;
+  --c-emerald-soft: rgba(62, 207, 142, .22);
+
+  /* стани */
+  --c-busy: #d9a85b;        /* приглушений бурштин */
+  --c-error: #d0675d;       /* приглушений червоний */
+  --c-stop: #a8463e;
+  --c-stop-2: #7d322c;
+  --c-go: #2e7d5b;          /* кнопка «Продовжити» */
+  --c-go-2: #1f5a41;
+
+  /* шрифти: системні (SF на Apple), без завантаження */
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Inter, Roboto, sans-serif;
+  --fs: 15px; --fs-s: 13px; --fs-xs: 12px; --fs-big: 30px;
+  --ls-caps: .14em;
+
+  /* відступи, радіуси, тіні */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px;
+  --r-s: 8px; --r-m: 14px; --r-l: 20px; --r-pill: 999px;
+  --shadow: 0 10px 40px rgba(0, 0, 0, .45);
+  --blur: blur(18px) saturate(1.1);
+
+  /* анімації (лише transform/opacity) */
+  --t-breathe: 5.5s;   /* спокій: повільне «дихання» */
+  --t-orbit: 26s;      /* звичайне обертання орбіт */
+  --t-orbit-fast: 5s;  /* думає: орбіти швидше */
+  --t-wave: 3.6s;      /* хвилі звуку */
+  --t-wave-speak: 1.6s;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* телефон: дрібний текст не менше 14 px */
+@media (max-width: 760px) {
+  :root { --fs-s: 14px; --fs-xs: 14px; --fs-big: 26px; }
+}
